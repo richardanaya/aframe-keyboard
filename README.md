@@ -1,6 +1,6 @@
 #aframe-keyboard
 
-This is a component for easily using a keyboard in aframe VR with webvr controllers
+This is a component for easily using a keyboard in aframe VR with webvr controllers. The keyboard itself is stylable in CSS.
 
 ![keybard in vr](http://i.imgur.com/IRKfRiv.png)
 
