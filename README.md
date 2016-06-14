@@ -4,7 +4,7 @@ This is a component for easily using a keyboard in aframe VR with webvr controll
 
 ![keybard in vr](http://i.imgur.com/IRKfRiv.png)
 
-still a work in progress, but check out the example and source
+check out the example to see how this works
 
 #install
 ```bash
