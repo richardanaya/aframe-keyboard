@@ -1,6 +1,6 @@
 {
   "name": "aframe-keyboard",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "A stylable keyboard for VR",
   "main": "index.js",
   "scripts": {

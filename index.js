@@ -12,6 +12,10 @@ require("aframe-html");
 			var keyboardHTML = document.createElement("a-plane")
 			keyboardHTML.setAttribute("html-material","width:512;height:512");
 
+			function triggerKeyboardEvent (node, eventType, key) {
+				node.emit("keyboard-keydown",{key:key});
+			}
+
 			keyboardHTML.addEventListener("raycaster-intersected-webvrcontroller0button1pressed",function(e){
 				var uv_x = e.detail.intersection.uv.x;
 				var uv_y = 1-e.detail.intersection.uv.y;
@@ -19,6 +23,7 @@ require("aframe-html");
 			});
 
 			this.el.appendChild(keyboardHTML);
+			var _this = this;
 			setTimeout(function(){
 				var component = keyboardHTML.components["html-material"];
 				var h = React.createElement;
@@ -26,7 +31,7 @@ require("aframe-html");
 				function render(){
 					var keyComponents = []
 					function createKey(k){
-						return h("div",{className:"key",onClick:function(){console.log(k)}},k);
+						return h("div",{className:"key",onClick:function(){triggerKeyboardEvent(_this.el,"keydown",k)}},k);
 					}
 					for(var i in keys){
 						for(var l in keys[i]){

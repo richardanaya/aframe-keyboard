@@ -19,11 +19,8 @@
 </a-scene>
 </body>
 <script>
-    document.querySelector("#keyboard").addEventListener("keydown",function(e){
-        console.log(e);
-    });
-    document.querySelector("#keyboard").addEventListener("keyup",function(){
-        console.log(e);
+    document.querySelector("#keyboard").addEventListener("keyboard-keydown",function(e){
+        console.log(e.detail.key);
     });
 </script>
 </html>
